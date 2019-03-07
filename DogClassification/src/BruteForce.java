@@ -1,5 +1,4 @@
-import java.lang.ArrayList;
-import java.lang.Math;
+import java.util.ArrayList;
 
 public class BruteForce {
 	
@@ -11,14 +10,14 @@ public class BruteForce {
 		this.dogList=dogList;
 	}
 	
-	private int[] compareCharacteristics() {
-		ArrayList<int> comparisons=new ArrayList<int>();
+	private ArrayList<Integer> compareCharacteristics() {
+		ArrayList<Integer> comparisons=new ArrayList<Integer>();
 		//For every dog breed
 		for (Dog d : dogList) {
 			//Go through all 12 characteristics
-			for (int i; i<12; i++) {
+			for (int i = 0; i<12; i++) {
 				//Subtract 
-				comparisons.add(Math.abs(userInputs.get(i)-(d.getAttributes()[i]));
+				comparisons.add(Math.abs(userInputs[i]-(d.getAttributes()[i])));
 			}
 		}
 		return comparisons;
