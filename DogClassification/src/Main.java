@@ -21,11 +21,11 @@ public class Main {
 		String[] parts;
 		for(String i: lines) {
 			parts = i.split(",");
-			int[] partsI = new int[parts.length];
-			for(int j = 0; j<parts.length;j++) {
+			int[] partsI = new int[parts.length -1];
+			for(int j = 1; j<parts.length;j++) {
 				partsI[j] = Integer.parseInt(parts[j]);
 			}
-			dogs.add(new Dog(partsI));
+			dogs.add(new Dog(parts[0],partsI));
 		}
 		
 		return dogs;
